@@ -1,12 +1,106 @@
 <!DOCTYPE html>
 <html>
   <head>
+     <title>Films-Hunter</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
+    <div class="row">
+     <div class="col s12 #b71c1c red darken-4">
+      <div class="nav-wrapper" id="navbar">
+        <img id="logo" class="responsive-img" src="assets/images/logo.png">
+        <h1 class="text">Films Hunter</h1>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="#">Acerca de</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+      </div>
 
+      <div class="row">
+        <div class="col s12">
+          <ul class="tabs">
+            <li class="tab col s3"><a class="active" href="#top_rated">Mejores Valoradas</a></li>
+            <li class="tab col s3"><a href="#upcoming_movies">Próximos Estrenos</a></li>
+            <li class="tab col s3"><a href="#pupular_movies">Populares</a></li>
+            <li class="tab col s3"><a href="#now_playing_movies">En cartelera</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <nav>
+       <div class="nav-wrapper">
+        <form>
+          <div class="input-field">
+            <input id="search" type="search" required placeholder="Género, peliculas, director...">
+            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+            <i class="material-icons">close</i>
+          </div>
+        </form>
+       </div>
+      </nav>
+     </div>
+   </div>
+
+<!--lo de cada contenedor-->
+   <div id="top_rated" class="col s12">
+     <div class="row" id="top_rated_container">
+     </div>
+   </div>
+   <div id="upcoming_movies" class="col s12">
+   </div>
+   <div id="pupular_movies" class="col s12">
+   </div>
+   <div id="now_playing_movies" class="col s12">
+   </div>
+<!-- areglado-->
+   <div class="row fila">
+     <div class="col s12 m4">
+       <div class="card">
+         <div class="card-image">
+           <img class="responsive-img" src="assets/images/it.jpg">
+           <span class="card-title">Card Title</span>
+           <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+         </div>
+         <div class="card-content ">
+           <p>In a small town in Maine, seven children known as The Losers Club come face to face with life problems, bullies and a monster that takes the shape of a clown called Pennywise.</p>
+         </div>
+       </div>
+     </div>
+
+     <div class="col s12 m4">
+       <div class="card">
+         <div class="card-image">
+           <img class="responsive-img" src="assets/images/maze.png">
+           <span class="card-title">Card Title</span>
+           <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+         </div>
+         <div class="card-content">
+           <p>Set in a post-apocalyptic world, young Thomas is deposited in a community of boys after his memory is erased, soon learning they're all trapped in a maze that will require him to join forces with fellow “runners” for a shot at escape.</p>
+         </div>
+       </div>
+     </div>
+
+     <div class="col s12 m4">
+       <div class="card">
+         <div class="card-image">
+           <img class="responsive-img" src="assets/images/jumanji.jpg">
+           <span class="card-title">Card Title</span>
+           <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+         </div>
+         <div class="card-content">
+           <p>When siblings Judy and Peter discover an enchanted board game that opens the door to a magical world, they unwittingly invite Alan -- an adult who's been trapped inside the game for 26 years -- into their living room. Alan's only hope for freedom is to finish the game, which proves risky as all three find themselves running from giant rhinoceroses, evil monkeys and other terrifying creatures.</p>
+         </div>
+       </div>
+     </div>
+   </div>
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
   </body>
 </html>
