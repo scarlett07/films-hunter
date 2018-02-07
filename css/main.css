@@ -1,3 +1,4 @@
+
 body{
 	color: #000;
     font-family: 'Source Sans Pro', Arial, sans-serif;
@@ -104,3 +105,20 @@ ol.people li {
     height: auto;
     margin-bottom: 0px;
 }
+
+#logo {
+  width: 12%;
+}
+
+#navbar {
+  height: 250%;
+}
+ .text {
+  display: inline-block;
+  margin-left: 20%;
+ }
+
+ .margin {
+   margin-top: 20px;
+ }
+
