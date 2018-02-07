@@ -1,6 +1,6 @@
 ## F I L M S - H U NT E R
 
-  ![Movie-01.png](assets/images/Movie-01.png)
+  ![logo.png](assets/images/logo.png)
 
 ## Objetivo
 
