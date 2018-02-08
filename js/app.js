@@ -58,6 +58,7 @@ getData(urlNowPlaying, containerNowPlaying);
 function checkSubmit(e) {
  if (e && e.keyCode == 13){
    $('#now_playing_movies').hide();
+   $('.main').empty();
    var searching = document.getElementById('search').value;
    search(searching);
    document.getElementById('search').value = "";
@@ -85,9 +86,9 @@ function search(search) {
        //dont show if the overview is null
      }
      else{
-     $(".main").append("<div class='col-sm-2 text-center movies m" + i +
-     "' id='" + id + "'><div class='tiles'><img onclick='movieInfo(" + id + ")' src=" + poster +
-      "><div class='ratings'><p class='lead rating'>" + rating +
+     $(".main").append("<div class='card col m4'" + i +
+     "' id='" + id + "'><div class='card-image'><img onclick='movieInfo(" + id + ")' src=" + poster +
+      "><div class=''><p class='lead rating'>" + rating +
        " <i class='fa fa-star' aria-hidden='true'></i></p></div></div></div>");
      }
    }
