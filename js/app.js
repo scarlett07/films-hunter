@@ -1,3 +1,4 @@
+
 // Variables para cada clasificación
 var urlTopRated = "https://api.themoviedb.org/3/movie/top_rated?page=1&language=es&api_key=e3e74cdb1ed664ea151cee9788f8d797";
 var containerRates = "#top_rated";
