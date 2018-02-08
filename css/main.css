@@ -1,3 +1,7 @@
+body {
+  background-color: black;
+}
+
 #logo {
   width: 12%;
 }
@@ -13,3 +17,7 @@
  .margin {
    margin-top: 20px;
  }
+
+.height-1{
+  height: 40vh;
+}
