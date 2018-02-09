@@ -63,6 +63,11 @@ getData(urlNowPlaying, containerNowPlaying);
 function checkSubmit(e) {
   if (e && e.keyCode == 13) {
     $('#now_playing_movies').hide();
+    $('#pupular_movies').hide();
+    $('#upcoming_movies').hide();
+    $('#top_rated').hide();
+    $('#cinemas').hide();
+
     $('.main').empty();
     var searching = document.getElementById('search').value;
     search(searching);
