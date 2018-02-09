@@ -102,53 +102,61 @@ ol.people li {
 
 
 #logo {
-  margin: -20px;
-  width: 35vh;
-  height: auto;
-  position: relative;
+ margin: -20px;
+ width: 35vh;
+ height: auto;
+ position: relative;
 }
 
 .nav-content{
-	margin-top: 20vh;
+    margin-top: 20vh;
 }
 
 
 .tabs {
-	background-color: #4a148c;
-	color: #FFF;
+    background-color: #4a148c;
+    color: #FFF;
 }
 
 .tabs .tab a {
-    color: #aa00ff;
+   color: #aa00ff;
 }
 
 .tabs .tab a:hover, .tabs .tab a.active {
-    background-color: transparent;
-    color: #fff;}
+   background-color: transparent;
+   color: #fff;}
 
 nav {
-    color: #311b92;
-    background-color: #7e57c2;
-    width: 100%;
-    height: 56px;
-    line-height: 56px;
+   color: #311b92;
+   background-color: #7e57c2;
+   width: 100%;
+   height: 56px;
+   line-height: 56px;
 }
 
 input[type=search]:not(.browser-default):focus:not([readonly]),
 textarea.materialize-textarea:focus:not([readonly]) {
-	border-bottom: 1px solid #e040fb;
-	-webkit-box-shadow: 0 1px 0 0  rgba(0, 0, 0, 0.87);
-	box-shadow: 0 1px 0 0  rgba(0, 0, 0, 0.87);
+    border-bottom: 1px solid #e040fb;
+    -webkit-box-shadow: 0 1px 0 0  rgba(0, 0, 0, 0.87);
+    box-shadow: 0 1px 0 0  rgba(0, 0, 0, 0.87);
 }
 
 
 input[type=search]:not(.browser-default):focus:not([readonly]) + label,
 textarea.materialize-textarea:focus:not([readonly]) + label {
-	color:  rgba(245, 118, 0, 1);
+    color:  rgba(245, 118, 0, 1);
 }
 
-.height-card{
-	height: 127vh;
+
+.height-card { /*esto es de las tarjetas*/
+  height: 105vh;
+  margin-bottom: 10px;
 }
+
+.big {/*abi*/
+  font-size: 35px;
+  color: #4a148c;
+}
+
 
  
