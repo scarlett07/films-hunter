@@ -1,7 +1,12 @@
+body {
+  background-color: #212121;}
+
+h5{
+	display: inline-block;
+	margin: 0px;}
 
 .custom {
-    background-color: #3d3d3d;
-    }
+    background-color: #3d3d3d;}
 
 .sing-colm {
     background-color: #000;
@@ -9,23 +14,20 @@
     margin: 0 auto;
     padding-top: 40px;
     padding-bottom: 40px;
-    z-index: 0;
-}
+    z-index: 0;}
 
 .content-movie {
     display: flex;
     align-items: flex-start;
     flex-wrap: nowrap;
-    padding: 0em 4em;
-}
+    padding: 0em 4em;}
 
 .content-img {
     display: block;
     width: 300px;
     height: 450px;
     position: relative;
-    z-index: 2;
-    }
+    z-index: 2;}
 
  #info-movie {
     color: #fff;
@@ -35,13 +37,11 @@
     align-content: center;
     width: 700px;
     box-sizing: border-box;
-    padding-left: 40px;
-}
+    padding-left: 40px;}
 
 .box-title {
     width: 100%;
-    margin-bottom: 30px;
-    }
+    margin-bottom: 30px;}
 
 
 #title {
@@ -99,14 +99,7 @@ ol.people li {
     margin-bottom: 0px;
 }
 
-body {
-  background-color: #212121;
-}
 
-h5{
-	display: inline-block;
-	margin: 0px;
-}
 
 #logo {
   margin: -20px;
