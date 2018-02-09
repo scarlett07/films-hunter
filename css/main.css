@@ -50,20 +50,17 @@ h5{
     font-weight: 700;
     display: inline-block;
     margin: 0px;
-    padding: 0px;
-}
+    padding: 0px;}
 
 #year {
     opacity: 0.6;
     font-size: 1.3em;
-    font-weight: 400;
-}
+    font-weight: 400;}
 
 #genero {
     font-size: 1.8em;
     font-weight: 400;
-    margin: 0px;
-}
+    margin: 0px;}
 
 #timer {
     opacity: 0.6;
