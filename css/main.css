@@ -147,7 +147,7 @@ textarea.materialize-textarea:focus:not([readonly]) + label {
 }
 
 .height-card{
-	height: 105vh;
+	height: 126vh;
 }
 
 #map{
