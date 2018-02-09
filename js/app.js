@@ -15,6 +15,7 @@ $('#upcoming_movies').click(getData(urlUpcoming, containerUpcoming));
 $('#pupular_movies').click (getData(urlPopularity, containerPopular));
 $('#pupular_movies').click (getData(urlNowPlaying, containerNowPlaying));
 $('#top_rated').click (getData(urlTopRated, containerRates));
+$(".button-collapse").sideNav();
 
 //Conectando con la API
 function getData(url, container) {
