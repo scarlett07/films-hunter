@@ -15,6 +15,7 @@ $('#upcoming_movies').click(getData(urlUpcoming, containerUpcoming));
 $('#pupular_movies').click (getData(urlPopularity, containerPopular));
 $('#pupular_movies').click (getData(urlNowPlaying, containerNowPlaying));
 $('#top_rated').click (getData(urlTopRated, containerRates));
+$(".button-collapse").sideNav();
 
 //Conectando con la API
 function getData(url, container) {
@@ -37,18 +38,21 @@ function loadMovies(data, container) {
   var topRated = $(container);
   $.each(data.results, function(index, value) {
     var element = $(
-      '<div class="col m4">' +
-      '  <div class="card">' +
-      '    <div class="card-image">' +
-      '      <img src="'+ 'https://image.tmdb.org/t/p/w500' + value.poster_path +'">' +
-      '      <span class="card-title">' + value.title + '</span>' +
-      '      <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>' +
-      '    </div>' +
-      '    <div class="card-content">' +
-      '      <p>' + value.overview + '</p>' +
-      '    </div>' +
-      '  </div>' +
-      '</div>');
+     '<div class="col m4 height-card">' +
+     '  <div  data-movie_id="'+ value.id +'"class="card">' +
+     '    <div class="card-image waves-effect waves-block waves-light">' +
+     '      <img class="activator responsive-img" src="'+ 'https://image.tmdb.org/t/p/w500' + value.poster_path +'">' +
+     '    </div>'+
+     '    <div class="card-content">'+
+     '      <span class="card-title activator grey-text text-darken-4">' + value.title + '</span>' +
+     '      <p><a href="#">This is a link</a></p>' +
+     '    </div>' +
+     '    <div class="card-reveal">' +
+     '    <span class="card-title grey-text text-darken-4">'+ value.title + '<i class="material-icons right">close</i></span>'+
+     '      <p>' + value.overview + '</p>' +
+     '    </div>' +
+     '  </div>' +
+     '</div>');
       topRated.append(element);
   });
 }
@@ -86,7 +90,7 @@ function search(search) {
        //dont show if the overview is null
      }
      else{
-     $(".main").append("<div class='card col m4'" + i +
+     $(".main").append("<div class='card col m4 height-card'" + i +
      "' id='" + id + "'><div class='card-image'><img onclick='movieInfo(" + id + ")' src=" + poster +
       "><div class=''><p class='lead rating'>" + rating +
        " <i class='fa fa-star' aria-hidden='true'></i></p></div></div></div>");
