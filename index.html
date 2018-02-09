@@ -12,64 +12,67 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
   <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
+
 <body>
 
-  
 
- <nav class="nav-extended  grey darken-4 ">
+  <nav class="nav-extended  grey darken-4 ">
     <div class="nav-wrapper">
       <a href="index.html" class="brand-logo center">
     <img id="logo"src="assets/images/logo.png"></a>
     </div>
     <div class="nav-content ">
       <ul class="tabs  text-aling-center">
-        <li class="tab col m2 s2"><a class="text-darken-2" href="#top_rated">Mejor Valoradas</a></li>
+        <li class="tab offset-m1 col m2 s2"><a class="active" href="#now_playing_movies">En cartelera</a></li>
+        <li class="tab col m2 s2"><a href="#top_rated">Mejor Valoradas</a></li>
         <li class="tab col m2 s2"><a href="#upcoming_movies">Próximos Estrenos</a></li>
         <li class="tab col m2 s2"><a href="#pupular_movies">Populares</a></li>
-        <li class="tab offset-m1 col m2 s2"><a class="active" href="#now_playing_movies">En cartelera</a></li>
         <li class="tab col m2 s2"><a href="#cinemas">Cines cercanos</a></li>
-
-
       </ul>
     </div>
   </nav>
 
 
-      <nav>
-        <div class="nav-wrapper darken-4 " >
-          <form>
-            <div class="input-field">
-              <input id="search" type="search" required placeholder="Género, película, director, ..." onKeyPress="return checkSubmit(event)">
-              <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-              <i class="material-icons ">close</i>
-            </div>
-          </form>
+  <nav>
+    <div class="nav-wrapper darken-4 ">
+      <form>
+        <div class="input-field">
+          <input id="search" type="search" required placeholder="Género, película, director, ..." onKeyPress="return checkSubmit(event)">
+          <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+          <i class="material-icons ">close</i>
         </div>
-      </nav>
+      </form>
     </div>
+  </nav>
+  </div>
   </div>
 
   <div class="row">
     <div class="col s12">
-    <div id="top_rated" class="col s12">
-      <div class="row" id="top_rated_container">
+      <div id="top_rated" class="col s12">
+        <div class="row" id="top_rated_container">
+        </div>
+      </div>
+      <div id="upcoming_movies" class="col s12">
+      </div>
+      <div id="pupular_movies" class="col s12">
+      </div>
+      <div id="now_playing_movies" class="col s12">
+      </div>
+      <div id="cinemas" class="col s12">
+        <div id="map">
+
+        </div>
+
       </div>
     </div>
-    <div id="upcoming_movies" class="col s12">
+    <div class="row text-center main">
     </div>
-    <div id="pupular_movies" class="col s12">
-    </div>
-    <div id="now_playing_movies" class="col s12">
-    </div>
-    <div id="cinemas" class="col s12">
-    </div>
-  </div>
-  <div class="row text-center main">
-  </div>
-  <script type="text/javascript" src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-  <script type="text/javascript" src="./js/app.js">
-  </script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsqgNOHwz8x0Kpu_82wqCwlhGkUywwtwo&libraries=places"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script type="text/javascript" src="./js/app.js">
+    </script>
 </body>
 
 </html>

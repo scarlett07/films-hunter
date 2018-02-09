@@ -1,21 +1,21 @@
-
 // Variables para cada clasificación
 var urlTopRated = "https://api.themoviedb.org/3/movie/top_rated?page=1&language=es&api_key=e3e74cdb1ed664ea151cee9788f8d797";
 var containerRates = "#top_rated";
 var urlPopularity = "https://api.themoviedb.org/3/movie/popular?page=1&language=es&api_key=e3e74cdb1ed664ea151cee9788f8d797";
 var containerPopular = "#pupular_movies";
 var urlUpcoming = "https://api.themoviedb.org/3/movie/upcoming?page=3&language=es&api_key=e3e74cdb1ed664ea151cee9788f8d797";
-var containerUpcoming= "#upcoming_movies";
+var containerUpcoming = "#upcoming_movies";
 var urlNowPlaying = "https://api.themoviedb.org/3/movie/now_playing?page=1&language=es&api_key=e3e74cdb1ed664ea151cee9788f8d797";
 var containerNowPlaying = "#now_playing_movies";
 
 
 //Eventos para cada tab
 $('#upcoming_movies').click(getData(urlUpcoming, containerUpcoming));
-$('#pupular_movies').click (getData(urlPopularity, containerPopular));
-$('#pupular_movies').click (getData(urlNowPlaying, containerNowPlaying));
-$('#top_rated').click (getData(urlTopRated, containerRates));
-$(".button-collapse").sideNav();
+$('#pupular_movies').click(getData(urlPopularity, containerPopular));
+$('#now_playing_movies').click(getData(urlNowPlaying, containerNowPlaying));
+$('#top_rated').click(getData(urlTopRated, containerRates));
+// $('#cinemas').click(initialize());
+
 
 //Conectando con la API
 function getData(url, container) {
@@ -45,7 +45,7 @@ function loadMovies(data, container) {
      '    </div>'+
      '    <div class="card-content">'+
      '      <span class="card-title activator grey-text text-darken-4">' + value.title + '</span>' +
-     '      <p><a href="#">This is a link</a></p>' +
+     '      <p><a href="#">VER TRAILER</a></p>' +
      '    </div>' +
      '    <div class="card-reveal">' +
      '    <span class="card-title grey-text text-darken-4">'+ value.title + '<i class="material-icons right">close</i></span>'+
@@ -60,19 +60,17 @@ function loadMovies(data, container) {
 getData(urlNowPlaying, containerNowPlaying);
 
 function checkSubmit(e) {
- if (e && e.keyCode == 13){
-   $('#now_playing_movies').hide();
-   $('.main').empty();
-   var searching = document.getElementById('search').value;
-   search(searching);
-   document.getElementById('search').value = "";
-   return false;
- }
+  if (e && e.keyCode == 13) {
+    $('#now_playing_movies').hide();
+    $('.main').empty();
+    var searching = document.getElementById('search').value;
+    search(searching);
+    document.getElementById('search').value = "";
+    return false;
+  }
 }
 
 function search(search) {
- $(".movies").remove();
- $(".tv").remove();
  //http://api.themoviedb.org/3/search/multi?api_key=84ade81a32ab2ef4395fd367ad4ea5be&query=
  var searchurl = "https://api.themoviedb.org/3/search/multi?api_key=e3e74cdb1ed664ea151cee9788f8d797&query=";
  var posterPaths = "http://image.tmdb.org/t/p/w500";
@@ -96,5 +94,15 @@ function search(search) {
        " <i class='fa fa-star' aria-hidden='true'></i></p></div></div></div>");
      }
    }
- });
+ }
+}
+
+// Mostrar trailer
+
+$('#trailer').click(getTrailer());
+
+function getTrailer(){
+  var id = this.dataset.movieid;
+  var urlMovie = "https://www.youtube.com/embed/"+id+"/videos?api_key=e3e74cdb1ed664ea151cee9788f8d797&language=es";
+  console.log(urlMovie);
 }
