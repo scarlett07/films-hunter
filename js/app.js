@@ -39,7 +39,7 @@ function loadMovies(data, container) {
   $.each(data.results, function(index, value) {
     var element = $(
       '<div class="col m4 height-card">' +
-      '  <div  data-movie_id="' + value.id + '"class="card">' +
+      '  <div id="peli"  data-movieid="' + value.id + '"class="card">' +
       '    <div class="card-image waves-effect waves-block waves-light">' +
       '      <img class="activator responsive-img" src="' + 'https://image.tmdb.org/t/p/w500' + value.poster_path + '">' +
       '    </div>' +
@@ -63,6 +63,11 @@ getData(urlNowPlaying, containerNowPlaying);
 function checkSubmit(e) {
   if (e && e.keyCode == 13) {
     $('#now_playing_movies').hide();
+    $('#pupular_movies').hide();
+    $('#upcoming_movies').hide();
+    $('#top_rated').hide();
+    $('#cinemas').hide();
+
     $('.main').empty();
     var searching = document.getElementById('search').value;
     search(searching);
@@ -95,12 +100,85 @@ function search(search) {
   });
 }
 
+//mapa
+var defaultLoc = new google.maps.LatLng(19.4203024, -99.1631142);
+
+function drawtMap(latLng) {
+    var option = { zoom: 15, center: latLng };
+
+    map = new google.maps.Map(document.getElementById('map'), option);
+    //marker
+    var marker = new google.maps.Marker({
+        position: latLng,
+        map: map,
+        title: 'tu estas aqui'
+    });
+    var request = {
+        location: latLng,
+        radius: '500',
+        query: 'Cines'
+    };
+    infowindow = new google.maps.InfoWindow();
+    service = new google.maps.places.PlacesService(map);
+    service.textSearch(request, callback);
+
+    function callback(results, status) {
+        if (status == google.maps.places.PlacesServiceStatus.OK) {
+            for (var i = 0; i < results.length; i++) {
+                var place = results[i];
+                createMarker(results[i]);
+            }
+        }
+    }
+
+    function createMarker(place) {
+        var placeLoc = place.geometry.location;
+        var marker = new google.maps.Marker({
+            map: map,
+            position: place.geometry.location
+        });
+
+        google.maps.event.addListener(marker, 'click', function() {
+            infowindow.setContent(place.name);
+            infowindow.open(map, this);
+        });
+    }
+}
+
+//obtener la geolocalización
+function initMap() {
+
+    if (navigator.geolocation) {
+        //Cargando
+        navigator.geolocation.getCurrentPosition(successs, fail);
+    } else {
+        drawtMap(defaultLoc);
+    }
+}
+
+//te encontre
+function successs(position) {
+    drawtMap(new google.maps.LatLng(position.coords.latitude, position.coords.longitude));
+    google.maps.event.trigger(map, 'resize');
+}
+// no te encontre
+function fail(error) {
+    drawtMap(defaultLoc);
+}
+
+//llamando la funcion
+$('#cinemasTab').click(function(e) {
+    initMap();
+});
+
+
+
 // Mostrar trailer
 
-$('#trailer').click(getTrailer());
-
-function getTrailer() {
-  var id = this.dataset.movieid;
-  var urlMovie = "https://www.youtube.com/embed/" + id + "/videos?api_key=e3e74cdb1ed664ea151cee9788f8d797&language=es";
-  console.log(urlMovie);
-}
+// $('#trailer').click(getTrailer());
+//
+// function getTrailer() {
+//   var id = ('#peli').dataset[movieid];
+//   var urlMovie = "https://www.youtube.com/embed/" + id + "/videos?api_key=e3e74cdb1ed664ea151cee9788f8d797&language=es";
+//   console.log(urlMovie);
+// }
