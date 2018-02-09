@@ -152,3 +152,10 @@ textarea.materialize-textarea:focus:not([readonly]) + label {
   width: 100%;
   height: 500px;
 }
+
+#video{
+  background-image: url('../assets/jumanjiwal.jpg'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
