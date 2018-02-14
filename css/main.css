@@ -103,6 +103,8 @@ ol.people li {
   width: 35vh;
   height: auto;
   position: relative;
+  background-color:;
+
 }
 
 .nav-content{
@@ -145,7 +147,7 @@ textarea.materialize-textarea:focus:not([readonly]) + label {
 }
 
 .height-card{
-	height: 127vh;
+	height: 126vh;
 }
 
 #map{
@@ -154,8 +156,8 @@ textarea.materialize-textarea:focus:not([readonly]) + label {
 }
 
 #video{
-  background-image: url('../assets/jumanjiwal.jpg'); 
-  background-size: cover;
+  background-image: url("https://78.media.tumblr.com/9031a5bf169889cf7b311a7f612701ff/tumblr_nxbp5iPR4F1s60oo7o1_400.gif"); 
+  background-size: 1400px 300px;
   background-repeat: no-repeat;
   background-position: center;
 }
