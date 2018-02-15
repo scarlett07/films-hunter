@@ -28,7 +28,7 @@ function getData(url, container) {
     "data": "{}"
   }
   $.ajax(settings).done(function(response) {
-    console.log(response);
+    //  console.log(response);
     //Cargando las películas
     loadMovies(response, container);
   });
@@ -39,13 +39,13 @@ function loadMovies(data, container) {
   $.each(data.results, function(index, value) {
     var element = $(
       '<div class="col m4 height-card">' +
-      '  <div id="peli"  data-movieid="' + value.id + '"class="card">' +
+      '  <div  data-movieid="' + value.id + '"class="card prueba">' +
       '    <div class="card-image waves-effect waves-block waves-light">' +
       '      <img class="activator responsive-img" src="' + 'https://image.tmdb.org/t/p/w500' + value.poster_path + '">' +
       '    </div>' +
       '    <div class="card-content">' +
       '      <span class="card-title activator grey-text text-darken-4">' + value.title + '</span>' +
-      '      <p><a href="#">VER TRAILER</a></p>' +
+      '      <p><a class="trailer" href="#">VER TRAILER</a></p>' +
       '    </div>' +
       '    <div class="card-reveal">' +
       '    <span class="card-title grey-text text-darken-4">' + value.title + '<i class="material-icons right">close</i></span>' +
@@ -75,6 +75,7 @@ function checkSubmit(e) {
     return false;
   }
 }
+
 function search(search) {
   //
   var searchurl = "https://api.themoviedb.org/3/search/multi?api_key=e3e74cdb1ed664ea151cee9788f8d797&query=";
@@ -104,81 +105,109 @@ function search(search) {
 var defaultLoc = new google.maps.LatLng(19.4203024, -99.1631142);
 
 function drawtMap(latLng) {
-    var option = { zoom: 15, center: latLng };
+  var option = {
+    zoom: 15,
+    center: latLng
+  };
 
-    map = new google.maps.Map(document.getElementById('map'), option);
-    //marker
+  map = new google.maps.Map(document.getElementById('map'), option);
+  //marker
+  var marker = new google.maps.Marker({
+    position: latLng,
+    map: map,
+    title: 'tu estas aqui'
+  });
+  var request = {
+    location: latLng,
+    radius: '500',
+    query: 'Cines'
+  };
+  infowindow = new google.maps.InfoWindow();
+  service = new google.maps.places.PlacesService(map);
+  service.textSearch(request, callback);
+
+  function callback(results, status) {
+    if (status == google.maps.places.PlacesServiceStatus.OK) {
+      for (var i = 0; i < results.length; i++) {
+        var place = results[i];
+        createMarker(results[i]);
+      }
+    }
+  }
+
+  function createMarker(place) {
+    var placeLoc = place.geometry.location;
     var marker = new google.maps.Marker({
-        position: latLng,
-        map: map,
-        title: 'tu estas aqui'
+      map: map,
+      position: place.geometry.location
     });
-    var request = {
-        location: latLng,
-        radius: '500',
-        query: 'Cines'
-    };
-    infowindow = new google.maps.InfoWindow();
-    service = new google.maps.places.PlacesService(map);
-    service.textSearch(request, callback);
 
-    function callback(results, status) {
-        if (status == google.maps.places.PlacesServiceStatus.OK) {
-            for (var i = 0; i < results.length; i++) {
-                var place = results[i];
-                createMarker(results[i]);
-            }
-        }
-    }
-
-    function createMarker(place) {
-        var placeLoc = place.geometry.location;
-        var marker = new google.maps.Marker({
-            map: map,
-            position: place.geometry.location
-        });
-
-        google.maps.event.addListener(marker, 'click', function() {
-            infowindow.setContent(place.name);
-            infowindow.open(map, this);
-        });
-    }
+    google.maps.event.addListener(marker, 'click', function() {
+      infowindow.setContent(place.name);
+      infowindow.open(map, this);
+    });
+  }
 }
 
 //obtener la geolocalización
 function initMap() {
 
-    if (navigator.geolocation) {
-        //Cargando
-        navigator.geolocation.getCurrentPosition(successs, fail);
-    } else {
-        drawtMap(defaultLoc);
-    }
+  if (navigator.geolocation) {
+    //Cargando
+    navigator.geolocation.getCurrentPosition(successs, fail);
+  } else {
+    drawtMap(defaultLoc);
+  }
 }
 
 //te encontre
 function successs(position) {
-    drawtMap(new google.maps.LatLng(position.coords.latitude, position.coords.longitude));
-    google.maps.event.trigger(map, 'resize');
+  drawtMap(new google.maps.LatLng(position.coords.latitude, position.coords.longitude));
+  google.maps.event.trigger(map, 'resize');
 }
 // no te encontre
 function fail(error) {
-    drawtMap(defaultLoc);
+  drawtMap(defaultLoc);
 }
 
 //llamando la funcion
 $('#cinemasTab').click(function(e) {
-    initMap();
+  initMap();
 });
 
 
 
 // Mostrar trailer
 
-// $('#trailer').click(getTrailer());
-//
-// function getTrailer() {
-//   var id = ('#peli').dataset[movieid];
-//   var urlMovie = "https://www.youtube.com/embed/" + id + "/videos?api_key=e3e74cdb1ed664ea151cee9788f8d797&language=es";
-//   console.log(urlMovie);
-// }
+$(document).ready(function() {
+  $('.trailer').click(getTrailer);
+});
+
+
+
+function getTrailer(event) {
+  event.preventDefault();
+  var id = $(this).parents('div[data-movieid]').data("movieid")
+  var urlMovie = "https://api.themoviedb.org/3/movie/" + id + "/videos?api_key=e3e74cdb1ed664ea151cee9788f8d797&language=es";
+  console.log(urlMovie);
+  var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": urlMovie,
+    "method": "GET",
+    "headers": {},
+    "data": "{}"
+  }
+
+  $.ajax(settings).done(function(response) {
+    var data= response;
+    if (data.results.length=== 0){
+      alert("trailer no disponible")
+    }else{
+      var id = response.results["0"].key
+      var trailer = "https://www.youtube.com/embed/" + id;
+      console.log(trailer);
+    }
+  });
+
+}
