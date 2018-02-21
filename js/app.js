@@ -198,7 +198,7 @@ function getTrailer(event) {
     "headers": {},
     "data": "{}"
   }
-
+//para generar el url de la pelicula
   $.ajax(settings).done(function(response) {
     var data= response;
     if (data.results.length=== 0){
