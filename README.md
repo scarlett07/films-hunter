@@ -1,4 +1,76 @@
-## F I L M S - H U NT E R
+# F I L M S - H U NT E R
+
+## Objetivo
+
+    Aplicación móvil para cinéfilos y cazadores de películas.
+
+  *  buscar películas
+  *  leer la reseña
+  *  mostrar los próximos estrenos
+
+MARCA
+
+CONTENIDO/ FUNCIONALIDADES
+
+  El contenido consiste en los posters de las películas, sin limitarse a los que se encuentran en los streamings. Cada uno de estos posters ofrece su reseña. El menú de la app tiene 5 pestañas:
+
+   * Películas en cartelera: contiene los posters de las películas que se encuentran en cartelera.
+
+   * Las mejor valoradas: películas mejor valoradas por la crítica.
+
+   * Próximos estrenos: las películas que están próximas a estrenarse.
+
+   * Las más populares: películas con mejor rating por el público.
+
+   * Cines cercanos: muestra el mapa con los cines que se encuentran más cerca de ti.
+
+   MODELO DE NEGOCIO
+
+   El modelo de negocio es In-App Advertising. La descarga de la app matriz es gratuita. Ofrece las películas en cartelera, las mejor valoradas, los próximos estrenos, las más populares y cines cercanos.
+   Dejando espacio de publicidad para la industria cinematográfica como las casas productoras, las cadenas de cine, las plataformas de streaming y productos relacionados.
+
+##  Organización
+
+   Usando el método de scrum, partimos de un to do list, se repartieron las tareas y comenzamos el trabajo, revisando que se ha logrado y que está pendiente.
+
+## Logros
+
+  ![app1.jpg](assets/images/app1.jpg)
+
+  ![app2.jpg](assets/images/app2.jpg)
+
+  ![app3.jpg](assets/images/app3.jpg)
+
+  ![app5.jpg](assets/images/app5.jpg)
+
+  ![app4.jpg](assets/images/app4.jpg)
+
+
+## Lo que estamos usando
+
+ Decidimos utilizar Materialize pues nos permite hacer una web-app y tener la vista Desktop y mobile.
+
+ Las API que estamos usando es THE MOVIE DB (TMDb) y GOOGLE Maps Places.
+
+## Desarrollo
+
+ API THE MOVIE DB (TMDb), para usar su base de datos y extraer la información de la película, el póster y la reseña.
+
+ API GOOGLE Maps Places, para obtener la ubicación del usuario y poder mostrarle cuáles son los cines cercanos a él.
+
+## Flujo del programa
+
+ Integrar la API THE MOVIE DB (TMDb), una vez generada la API Key, se extrae la data que se va a utilizar y se manipula dinámicamente a través del DOM.
+
+ Integrar la API GOOGLE Maps Places, una vez generada la API Key, se genera el código para poder obtener las coordenadas del usuario y mostrar dinámicamente a través del DOM el mapa con los cines cercanos.
+
+
+
+
+
+
+
+
 
   ![logo.png](assets/images/logo.png)
 
@@ -77,67 +149,4 @@
  ![perfil.jpg](assets/images/perfil.jpg)
 
 
-## Objetivo
-
-    Aplicación móvil para cinéfilos y cazadores de películas.
-
-  *  buscar películas
-  *  leer la reseña
-  *  mostrar los próximos estrenos
-
-MARCA
-
-CONTENIDO/ FUNCIONALIDADES
-
-  El contenido consiste en los posters de las películas, sin limitarse a los que se encuentran en los streamings. Cada uno de estos posters ofrece su reseña. El menú de la app tiene 5 pestañas:
-
-   * Películas en cartelera: contiene los posters de las películas que se encuentran en cartelera.
-
-   * Las mejor valoradas: películas mejor valoradas por la crítica.
-
-   * Próximos estrenos: las películas que están próximas a estrenarse.
-
-   * Las más populares: películas con mejor rating por el público.
-
-   * Cines cercanos: muestra el mapa con los cines que se encuentran más cerca de ti.
-
-   MODELO DE NEGOCIO
-
-   El modelo de negocio es In-App Advertising. La descarga de la app matriz es gratuita. Ofrece las películas en cartelera, las mejor valoradas, los próximos estrenos, las más populares y cines cercanos.
-   Dejando espacio de publicidad para la industria cinematográfica como las casas productoras, las cadenas de cine, las plataformas de streaming y productos relacionados.
-
-##  Organización
-
-   Usando el método de scrum, partimos de un to do list, se repartieron las tareas y comenzamos el trabajo, revisando que se ha logrado y que está pendiente.
-
-## Logros
-
-  ![app1.jpg](assets/images/app1.jpg)
-
-  ![app2.jpg](assets/images/app2.jpg)
-
-  ![app3.jpg](assets/images/app3.jpg)
-
-  ![app5.jpg](assets/images/app5.jpg)
-
-  ![app4.jpg](assets/images/app4.jpg)
-
-
-## Lo que estamos usando
-
- Decidimos utilizar Materialize pues nos permite hacer una web-app y tener la vista Desktop y mobile.
-
- Las API que estamos usando es THE MOVIE DB (TMDb) y GOOGLE Maps Places.
-
-## Desarrollo
-
- API THE MOVIE DB (TMDb), para usar su base de datos y extraer la información de la película, el póster y la reseña.
-
- API GOOGLE Maps Places, para obtener la ubicación del usuario y poder mostrarle cuáles son los cines cercanos a él.
-
-## Flujo del programa
-
- Integrar la API THE MOVIE DB (TMDb), una vez generada la API Key, se extrae la data que se va a utilizar y se manipula dinámicamente a través del DOM.
-
- Integrar la API GOOGLE Maps Places, una vez generada la API Key, se genera el código para poder obtener las coordenadas del usuario y mostrar dinámicamente a través del DOM el mapa con los cines cercanos.
 
