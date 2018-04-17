@@ -1,5 +1,9 @@
 # F I L M S - H U NT E R
 
+
+![app1.jpg](assets/images/app1.jpg)  ![app2.jpg](assets/images/app2.jpg)  ![app3.jpg](assets/images/app3.jpg)
+![app5.jpg](assets/images/app5.jpg)  ![app4.jpg](assets/images/app4.jpg)
+
 ## Objetivo
 
     Aplicación móvil para cinéfilos y cazadores de películas.
@@ -32,18 +36,6 @@ CONTENIDO/ FUNCIONALIDADES
 ##  Organización
 
    Usando el método de scrum, partimos de un to do list, se repartieron las tareas y comenzamos el trabajo, revisando que se ha logrado y que está pendiente.
-
-## Logros
-
-  ![app1.jpg](assets/images/app1.jpg)
-
-  ![app2.jpg](assets/images/app2.jpg)
-
-  ![app3.jpg](assets/images/app3.jpg)
-
-  ![app5.jpg](assets/images/app5.jpg)
-
-  ![app4.jpg](assets/images/app4.jpg)
 
 
 ## Lo que estamos usando
