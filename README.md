@@ -1,6 +1,12 @@
 # F I L M S - H U NT E R
 
-  ![logo.png](assets/images/logo.png)
+![screencapture-scarlett07-github-io-films-hunter-2018-04-17-14_18_50](https://user-images.githubusercontent.com/12899162/38891634-91c86d44-424a-11e8-815a-fdf373f57c9b.jpg)
+
+![app2](https://user-images.githubusercontent.com/12899162/38891494-2a792070-424a-11e8-9954-06e6f03e2ad2.jpg)
+![app3](https://user-images.githubusercontent.com/12899162/38891495-2a8b6384-424a-11e8-9b43-e361c1b34940.jpg)
+![app4](https://user-images.githubusercontent.com/12899162/38891496-2aa21ad4-424a-11e8-88c7-6665702f8272.jpg)
+![app1](https://user-images.githubusercontent.com/12899162/38891497-2abbbc32-424a-11e8-82a1-8be87ebffc34.jpg)
+
 
 
 ## Objetivo
@@ -54,14 +60,6 @@ CONTENIDO/ FUNCIONALIDADES
  Integrar la API THE MOVIE DB (TMDb), una vez generada la API Key, se extrae la data que se va a utilizar y se manipula dinámicamente a través del DOM.
 
  Integrar la API GOOGLE Maps Places, una vez generada la API Key, se genera el código para poder obtener las coordenadas del usuario y mostrar dinámicamente a través del DOM el mapa con los cines cercanos.
-
-## Logros
-![screencapture-scarlett07-github-io-films-hunter-2018-04-17-14_18_50](https://user-images.githubusercontent.com/12899162/38891634-91c86d44-424a-11e8-815a-fdf373f57c9b.jpg)
-
-![app2](https://user-images.githubusercontent.com/12899162/38891494-2a792070-424a-11e8-9954-06e6f03e2ad2.jpg)
-![app3](https://user-images.githubusercontent.com/12899162/38891495-2a8b6384-424a-11e8-9b43-e361c1b34940.jpg)
-![app4](https://user-images.githubusercontent.com/12899162/38891496-2aa21ad4-424a-11e8-88c7-6665702f8272.jpg)
-![app1](https://user-images.githubusercontent.com/12899162/38891497-2abbbc32-424a-11e8-82a1-8be87ebffc34.jpg)
 
 
 ## Análisis del usuario
