@@ -2,7 +2,6 @@
 
 ![screencapture-scarlett07-github-io-films-hunter-2018-04-17-14_18_50](https://user-images.githubusercontent.com/12899162/38891634-91c86d44-424a-11e8-815a-fdf373f57c9b.jpg)
 
-![app2](https://user-images.githubusercontent.com/12899162/38891494-2a792070-424a-11e8-9954-06e6f03e2ad2.jpg)
 ![app3](https://user-images.githubusercontent.com/12899162/38891495-2a8b6384-424a-11e8-9b43-e361c1b34940.jpg)
 ![app4](https://user-images.githubusercontent.com/12899162/38891496-2aa21ad4-424a-11e8-88c7-6665702f8272.jpg)
 ![app1](https://user-images.githubusercontent.com/12899162/38891497-2abbbc32-424a-11e8-82a1-8be87ebffc34.jpg)
